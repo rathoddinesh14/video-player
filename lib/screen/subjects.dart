@@ -12,7 +12,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
 
   void setup() async {
     InitVP vp = InitVP(location: "/home/rathod/Videos/UPSC");
-    await vp.setupSubjects();
+    await vp.setup();
     setState(() {
       subjectNames = vp.fileList;
     });
@@ -44,6 +44,11 @@ class _SubjectScreenState extends State<SubjectScreen> {
           ],
         ));
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 }
 
 Widget buildSubjectCard(BuildContext context, String text) => SizedBox(
@@ -65,7 +70,7 @@ Widget buildSubjectCard(BuildContext context, String text) => SizedBox(
         ),
         onTap: () {
           Navigator.pushNamed(context, '/chapters',
-              arguments: {'chapter': text});
+              arguments: {'subject': text});
         },
       ),
     );
