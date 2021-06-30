@@ -6,7 +6,7 @@ class InitVP {
 
   InitVP({required this.location}) : fileList = [];
 
-  Future<void> setupSubjects() async {
+  Future<void> setup() async {
     fileList.clear();
     final myHome = Directory(location);
 
@@ -17,7 +17,6 @@ class InitVP {
   }
 }
 
-void getVideos(String subj, String chap) {}
 void getChapters(String subj) {}
 
 String trimPath(String input) {
