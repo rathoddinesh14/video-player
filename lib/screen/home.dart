@@ -13,16 +13,28 @@ class _HomeState extends State<Home> {
         title: Text('Home'),
         centerTitle: true,
       ),
-      body: Row(
-        children: [
-          Text('Home screen'),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: FloatingActionButton(onPressed: () {
-              Navigator.pushNamed(context, '/subjects');
-            }),
-          )
-        ],
+      body: Container(
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/Aurora_borealis_pillars.jpg"),
+                fit: BoxFit.cover)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: IconButton(
+                color: Colors.white,
+                icon: const Icon(Icons.play_arrow),
+                tooltip: 'Next screen',
+                onPressed: () {
+                  Navigator.pushNamed(context, '/subjects');
+                },
+                iconSize: 150,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

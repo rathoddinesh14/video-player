@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:videoplayer/screen/chapters.dart';
 import 'package:videoplayer/screen/home.dart';
 import 'package:videoplayer/screen/subjects.dart';
 
@@ -9,7 +10,8 @@ void main() {
     initialRoute: '/home',
     routes: {
       '/home': (context) => Home(),
-      '/subjects': (context) => Subjects(),
+      '/subjects': (context) => SubjectScreen(),
+      '/chapters': (context) => ChapterScreen(),
     },
   ));
 }
