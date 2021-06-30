@@ -14,3 +14,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Reference and Citation
+
+https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2017/04/aurora_borealis/16910526-1-eng-GB/Aurora_borealis_pillars.jpg
