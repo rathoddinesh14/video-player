@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:process_run/shell.dart';
 import 'package:videoplayer/utils/initvp.dart';
 
 class ChapterScreen extends StatefulWidget {
@@ -139,8 +140,19 @@ Widget buildVideoCard(String video) => SizedBox(
             ),
           ),
         ),
-        onTap: () {
+        onTap: () async {
           print("Video playing : $video");
+
+          var shell = Shell();
+
+          try {
+            await shell.run('''
+          # Play video
+          mpv '$video'
+            ''');
+          } catch (e) {
+            print(e.toString());
+          }
         },
       ),
     );
